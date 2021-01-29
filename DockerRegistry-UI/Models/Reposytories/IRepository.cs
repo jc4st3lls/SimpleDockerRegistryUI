@@ -10,6 +10,6 @@ namespace DockerRegistry_UI.Models.Reposytories
         Task<IList<Image>> Catalog();
         Task<string> TaskList(string id);
 
-        Task<string> RemoveImage(string id, string tag);
+        
     }
 }

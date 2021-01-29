@@ -1,0 +1,46 @@
+﻿<Properties StartupConfiguration="{A96AF817-169C-428E-9C15-FFCE38398660}|Default">
+  <MonoDevelop.Ide.ItemProperties.DockerRegistry-UI PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DockerRegistry-UI/Dockerfile">
+    <Files>
+      <File FileName="DockerRegistry-UI/wwwroot/js/catalog.js" Line="18" Column="43" IsPinned="True" />
+      <File FileName="DockerRegistry-UI/appsettings.json" Line="15" Column="1" />
+      <File FileName="DockerRegistry-UI/wwwroot/Catalog.html" Line="23" Column="23" />
+      <File FileName="DockerRegistry-UI/Controllers/CatalogController.cs" Line="27" Column="13" />
+      <File FileName="DockerRegistry-UI/Models/Reposytories/Repository.cs" Line="31" Column="41" />
+      <File FileName="DockerRegistry-UI/Models/Reposytories/IRepository.cs" Line="16" Column="1" />
+      <File FileName="DockerRegistry-UI/AppSet.cs" Line="1" Column="1" />
+      <File FileName="DockerRegistry-UI/Startup.cs" Line="54" Column="1" />
+      <File FileName="README.md" Line="17" Column="1" />
+      <File FileName="DockerRegistry-UI/Models/Catalog.cs" Line="1" Column="1" />
+      <File FileName="DockerRegistry-UI/Models/Image.cs" Line="1" Column="1" />
+      <File FileName="DockerRegistry-UI/Models/CatalogList.cs" Line="13" Column="1" />
+      <File FileName="DockerRegistry-UI/Dockerfile" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SimpleDockerRegistryUI" expanded="True">
+            <Node name="Solution Items" expanded="True" />
+            <Node name="DockerRegistry-UI" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="wwwroot" expanded="True">
+                <Node name="js" expanded="True" />
+              </Node>
+              <Node name="appsettings.json" expanded="True" />
+              <Node name="Dockerfile" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/jcastells/Projects/github/jc4st3lls/SimpleDockerRegistryUI/DockerRegistry-UI/Controllers/CatalogController.cs" relfile="DockerRegistry-UI/Controllers/CatalogController.cs" line="43" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

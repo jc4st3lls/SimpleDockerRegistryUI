@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "jx/hHdA8/1PK+iFJvIVpyya3b7e6YOQW9bkOQIf6mQdkZaxpz1gARq6Bdy0qxz+5WbKoeJhT2IdYmC2nrrKj1g==",
+  "success": true,
+  "projectFilePath": "/Users/jcastells/Projects/github/jc4st3lls/SimpleDockerRegistryUI/DockerRegistry-UI/DockerRegistry-UI.csproj",
+  "expectedPackageFiles": [
+    "/Users/jcastells/.nuget/packages/microsoft.extensions.configuration/3.1.11/microsoft.extensions.configuration.3.1.11.nupkg.sha512",
+    "/Users/jcastells/.nuget/packages/microsoft.extensions.configuration.abstractions/3.1.11/microsoft.extensions.configuration.abstractions.3.1.11.nupkg.sha512",
+    "/Users/jcastells/.nuget/packages/microsoft.extensions.configuration.binder/3.1.11/microsoft.extensions.configuration.binder.3.1.11.nupkg.sha512",
+    "/Users/jcastells/.nuget/packages/microsoft.extensions.dependencyinjection/3.1.11/microsoft.extensions.dependencyinjection.3.1.11.nupkg.sha512",
+    "/Users/jcastells/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/3.1.11/microsoft.extensions.dependencyinjection.abstractions.3.1.11.nupkg.sha512",
+    "/Users/jcastells/.nuget/packages/microsoft.extensions.logging/3.1.11/microsoft.extensions.logging.3.1.11.nupkg.sha512",
+    "/Users/jcastells/.nuget/packages/microsoft.extensions.logging.abstractions/3.1.11/microsoft.extensions.logging.abstractions.3.1.11.nupkg.sha512",
+    "/Users/jcastells/.nuget/packages/microsoft.extensions.logging.debug/3.1.11/microsoft.extensions.logging.debug.3.1.11.nupkg.sha512",
+    "/Users/jcastells/.nuget/packages/microsoft.extensions.options/3.1.11/microsoft.extensions.options.3.1.11.nupkg.sha512",
+    "/Users/jcastells/.nuget/packages/microsoft.extensions.primitives/3.1.11/microsoft.extensions.primitives.3.1.11.nupkg.sha512",
+    "/Users/jcastells/.nuget/packages/microsoft.visualstudio.azure.containers.tools.targets/1.10.8/microsoft.visualstudio.azure.containers.tools.targets.1.10.8.nupkg.sha512",
+    "/Users/jcastells/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

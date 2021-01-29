@@ -13,17 +13,7 @@ namespace DockerRegistry_UI
 {
     public class Program
     {
-        //public static void Main(string[] args)
-        //{
-        //    CreateHostBuilder(args).Build().Run();
-        //}
-
-        //public static IHostBuilder CreateHostBuilder(string[] args) =>
-        //    Host.CreateDefaultBuilder(args)
-        //        .ConfigureWebHostDefaults(webBuilder =>
-        //        {
-        //            webBuilder.UseStartup<Startup>();
-        //        });
+       
 
 
         public static void Main(string[] args)
@@ -38,10 +28,10 @@ namespace DockerRegistry_UI
         .UseKestrel(options =>
         {
             options.Listen(IPAddress.Any, 80);
-            options.Listen(IPAddress.Any, 443, listenOptions =>
-            {
-                listenOptions.UseHttps("hs.althaia.cat.pfx", "u3s9u1u3s9u1");
-            });
+            //options.Listen(IPAddress.Any, 443, listenOptions =>
+            //{
+            //    listenOptions.UseHttps("[certicat.pfx]", "[password]");
+            //});
         })
         .Build();
 

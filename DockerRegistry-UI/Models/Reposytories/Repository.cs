@@ -71,7 +71,11 @@ namespace DockerRegistry_UI.Models.Reposytories
                 using (var httpclient = new HttpClient(handler))
                 {
                     httpclient.BaseAddress = new Uri(_registryurl);
-                    httpclient.DefaultRequestHeaders.Add("Authorization", _credentials);
+                    if (!string.IsNullOrEmpty(AppSet.RegistryCredentials))
+                    {
+                        httpclient.DefaultRequestHeaders.Add("Authorization", _credentials);
+                    }
+                   
                     var response = await httpclient.GetAsync(path);
                     if (response.StatusCode == System.Net.HttpStatusCode.OK)
                     {
@@ -84,65 +88,6 @@ namespace DockerRegistry_UI.Models.Reposytories
             return ret;
         }
 
-        public async Task<string> RemoveImage(string id, string tag)
-        {
-            //DELETE /v2/<name>/manifests/<reference>
-            // Per agafar el digest cal aquesta capçalera
-            // Accept: application/vnd.docker.distribution.manifest.v2+json
-            // Ex: curl -v --silent -H "Accept: application/vnd.docker.distribution.manifest.v2+json" -X GET http://localhost:5000/v2/<name>/manifests/<tag> 2>&1 | grep Docker-Content-Digest | awk '{print ($3)}'
-            // Response sha256:6de813fb93debd551ea6781e90b02f1f93efab9d882a6cd06bbd96a07188b073
-            // curl -v --silent -H "Accept: application/vnd.docker.distribution.manifest.v2+json" -X DELETE http://127.0.0.1:5000/v2/<name>/manifests/sha256:6de813fb93debd551ea6781e90b02f1f93efab9d882a6cd06bbd96a07188b073
-
-            string ret = string.Empty;
-            string path = $"v2/{id}/manifests/{tag}";
-            
-
-            using (var handler = new HttpClientHandler())
-            {
-                handler.ClientCertificateOptions = ClientCertificateOption.Manual;
-                handler.ServerCertificateCustomValidationCallback =
-                    (httpRequestMessage, cert, cetChain, policyErrors) =>
-                    {
-                        return true;
-                    };
-
-                using (var httpclient = new HttpClient(handler))
-                {
-                    httpclient.BaseAddress = new Uri(_registryurl);
-                    httpclient.DefaultRequestHeaders.Add("Authorization", _credentials);
-                    httpclient.DefaultRequestHeaders.Add("Accept", "application/vnd.docker.distribution.manifest.v2+json");
-                    string manifestid = string.Empty;
-                    var response = await httpclient.GetAsync(path);
-                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
-                    {
-                        string manifest= await response.Content.ReadAsStringAsync();
-                        if (!string.IsNullOrEmpty(manifest))
-                        {
-                            JObject jobj = JObject.Parse(manifest);
-
-                            manifestid = (string)jobj.SelectToken("config.digest");
-                            if (!string.IsNullOrEmpty(manifestid))
-                            {
-                                string path2 = $"v2/{id}/manifests/{manifestid}";
-                                var deresponse = await httpclient.DeleteAsync(path2);
-                                if (deresponse.StatusCode== System.Net.HttpStatusCode.OK)
-                                {
-                                    ret = "OK";
-                                }
-
-
-                            }
-                        }
-                    
-                    
-                    }
-
-                }
-            }
-
-
-            return ret;
-
-        }
+        
     }
 }

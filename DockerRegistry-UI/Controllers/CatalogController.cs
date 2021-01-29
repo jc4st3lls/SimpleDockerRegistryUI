@@ -21,39 +21,18 @@ namespace DockerRegistry_UI.Controllers
         }
         // GET: api/Catalog
         [HttpGet(Name="Catalog")]
-        public IList<Image> Get()
+        public CatalogList Get()
         {
-            return _repository.Catalog().GetAwaiter().GetResult();
+            return new CatalogList()
+            {
+                Server = AppSet.RegistryUrl.Split(@"//")[1],
+
+                Images = _repository.Catalog().GetAwaiter().GetResult()
+            };
+
         }
 
-        // GET: api/Catalog/5
-        [HttpGet("{id}/tags/list", Name = "GetCatalog")]
-        public string Get(string id)
-        {
-            return _repository.TaskList(id).GetAwaiter().GetResult();
-        }
+ 
 
-        // POST: api/Catalog
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT: api/Catalog/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}/{tag}")]
-        public ActionResult<string> Delete(string id,string tag)
-        {
-            string res=_repository.RemoveImage(id, tag).GetAwaiter().GetResult();
-
-            return Ok(res);
-
-
-        }
     }
 }

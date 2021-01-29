@@ -1,32 +1,20 @@
 ﻿/// <reference path="jquery.min.js" />
 
 
-const server = "dockerhub.althaia.cat";
 
+var server = '';
 function Show(name, tag) {
     $("#ImgT").text(server + "/" + name + ":" + tag);
-    $("#BTR").on("click", function () {
-        var path = "/v2/Catalog/".concat(name).concat("/").concat(tag);
-
-        $.ajax({
-            url: path,
-            type: 'DELETE',
-            success: function (data) {
-                var res = data;
-            }
-        });
-       
-    });
+    
 }
 
 
 function readyFN() {
-
-    
-
-
-    $.getJSON("/v2/Catalog", function (data) {
+    $.getJSON("/v2/Catalog", function (catalog) {
+        server = catalog.server;
+        var data = catalog.images;
         var items = [];
+
         $.each(data, function (key, val) {
             var tags = val.tags.join(",");
             var tagslink = [];
@@ -45,14 +33,13 @@ function readyFN() {
 
 
 
-            items.push("<li id='" + key + "'>" + val.name + "[" + tagslink + "]" +  "</li>");
+            items.push("<li id='" + key + "'>" + val.name + "[" + tagslink + "]" + "</li>");
 
 
         });
 
         $("#ListC").html(items.join(""));
     });
-
    
 
 }
