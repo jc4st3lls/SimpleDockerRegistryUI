@@ -1,5 +1,5 @@
 # SimpleDockerRegistryUI
-Implementació de una visualització simple de les imatges publicades en un registre de imatges Docker privat.
+Implementació de una visualització simple de les imatges publicades en un registre de imatges Docker.
 
 # Que és un Docker Registry?
 Un registre de docker, ve a ser un magatzem de imatges de 'solucions' a punt per ser desplegades en contenidors Docker.
