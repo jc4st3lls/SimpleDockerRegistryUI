@@ -13,13 +13,7 @@ A tenir en compte: en el fitxer **appsettings.json** hi ha dos paràmetres de co
 Si mireu la documentació, veureu que es pot securitzar l'accés de diferents maneres, una de les quals és Auth Basic. Si securitzem
 l'accés a la api, en la configuració especifiquem les credencials.
 
-Donacions
-
-BTC = bc1q33wmuc0lcwh4krchfmxrt4jak3v628z658f85j
-
-TRX = TRdxjgLv4nr8GYwsdXkUv4ZwCCTvfMqgnS
-
-ETH = 0x3582cf65c158b23bbbaee3e3a3158ce4b5d99978
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/jcastellsgH)
 
 :_)
 
